@@ -10,6 +10,7 @@ import { FiShoppingCart } from "react-icons/fi"
 import { Link } from 'react-router-dom'
 import Context from '../Context'
 import Sidebar from './Sidebar'
+import Typed from "react-typed" 
 
 
 function Header() {
@@ -55,7 +56,7 @@ function Header() {
                         <div><FaShoppingBag /></div>
                     </Link>
                     <Link to={"/"}>
-                        <div><span className='font-bold'>Snap</span>Up.</div>
+                        <div className='w-[180px] font-semibold'><Typed strings={["Hasan Kuray","Frontend","Developer"]} typeSpeed={120} backSpeed={140} loop /></div>
                     </Link>
                 </div>
 

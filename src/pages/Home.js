@@ -76,7 +76,7 @@ function Home() {
     return (
         <div className=''>
             <div className='flex justify-center bg-white px-5 pb-20 pt-10'>
-                <Slider {...settings} className="!w-[600px] shadow-2xl shadow-turuncu" >
+                <Slider {...settings} className="!w-[90%] object-fit shadow-2xl shadow-turuncu" >
                     <img className='w-full !h-[400px] object-cover' src="https://img.freepik.com/free-photo/girl-holds-fashion-shopping-bag-beauty_1150-13673.jpg" alt="resim 1" />
                     <img className='w-full !h-[400px] object-cover' src="https://media.istockphoto.com/id/1193750118/photo/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone.jpg?s=170667a&w=0&k=20&c=CNxEgO_okU6Rl5R0SmPez4uPwRJ-v_5Q0fdjWPzpmWA=" alt=" resim 2" />
                     <img className='w-full !h-[400px] object-cover' src="https://cdn.searchenginejournal.com/wp-content/uploads/2022/08/google-shopping-ads-6304dccb7a49e-sej-1280x720.png" alt="" />
