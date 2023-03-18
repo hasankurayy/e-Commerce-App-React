@@ -7,6 +7,7 @@ import { MdChildCare, MdFastfood } from "react-icons/md"
 import { GoHome } from "react-icons/go"
 import { TbArmchair } from "react-icons/tb"
 
+// router in footer
 import { Link } from 'react-scroll'
 
 function Footer() {

@@ -9,7 +9,13 @@ import axios from 'axios';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 
+// scroll animation
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 function Home() {
+
+    AOS.init({duration: 2000})
 
     const settings = {
         dots: false,
@@ -84,11 +90,11 @@ function Home() {
             </div>
 
             <div className='mx-10 my-10'>
-                <div className='px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div data-aos="flip-up" className='px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>SEE OUR PRODUCTS</p>
                 </div>
 
-                <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3'>
+                <div data-aos="fade-down" className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3'>
                     {allProducts.products && allProducts.products.map((product) => (
                         <Card product={product} />
                     ))}
@@ -96,97 +102,97 @@ function Home() {
 
 
 
-                <div id='smartphones' className='mt-8 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='smartphones' data-aos="flip-up" className='mt-8 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>SMARTPHONES</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {smartphones && smartphones.map((smartphone) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={smartphone} />
                         </div>
                     ))}
                 </Slider>
 
-                <div id='laptops' className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='laptops' data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>LAPTOPS</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {laptops && laptops.map((laptop) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={laptop} />
                         </div>
                     ))}
                 </Slider>
 
-                <div id='fragrances' className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='fragrances' data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>FRAGRANCES</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {fragrances && fragrances.map((fragrance) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={fragrance} />
                         </div>
                     ))}
                 </Slider>
 
-                <div id='skincares' className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='skincares' data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>SKINCARES</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {skincares && skincares.map((skincare) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={skincare} />
                         </div>
                     ))}
                 </Slider>
 
-                <div id='groceries' className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='groceries' data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>GROCERIES</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {groceries && groceries.map((grocerie) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={grocerie} />
                         </div>
                     ))}
                 </Slider>
 
-                <div id='home-decorations' className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='home-decorations' data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>HOME DECORATIONS</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {homeDecorations && homeDecorations.map((homeDecoration) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={homeDecoration} />
                         </div>
                     ))}
                 </Slider>
 
-                <div id='furnitures' className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div id='furnitures' data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>FURNITURES</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {furnitures && furnitures.map((furniture) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={furniture} />
                         </div>
                     ))}
                 </Slider>
 
-                <div className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div data-aos="flip-up" className='mt-20 px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>TOPS</p>
                 </div>
 
                 <Slider {...settings2} className="shadow-lg pb-3 shadow-turuncu">
                     {tops && tops.map((top) => (
-                        <div className="px-3">
+                        <div data-aos="fade-down" className="px-3">
                             <Card product={top} />
                         </div>
                     ))}
