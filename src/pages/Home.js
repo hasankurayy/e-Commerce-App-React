@@ -13,9 +13,21 @@ import Footer from '../components/Footer';
 import AOS from "aos"
 import "aos/dist/aos.css"
 
+// notification
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function Home() {
 
-    AOS.init({duration: 2000})
+    // scroll animation
+    AOS.init({ duration: 2000 })
+
+    // notification func
+    const notify = () => toast("Follow me on Linkedin")
+
+    setInterval(() => {
+        notify()
+    }, 15000);
 
     const settings = {
         dots: false,
@@ -90,7 +102,7 @@ function Home() {
             </div>
 
             <div className='mx-10 my-10'>
-                <div data-aos="flip-up" className='px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
+                <div onClick={notify} data-aos="flip-up" className='px-8 py-4 text-gray-400 font-bold text-xl bg-white border-l-8 border-turuncu rounded-md mb-10'>
                     <p>SEE OUR PRODUCTS</p>
                 </div>
 
@@ -201,9 +213,12 @@ function Home() {
             </div>
 
             <div>
-                <Footer />
+                <Footer onClick={notify} />
             </div>
 
+            <ToastContainer
+                position="bottom-left"
+                limit={1} />
         </div>
     )
 }
